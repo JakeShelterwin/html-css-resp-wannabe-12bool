@@ -10,10 +10,16 @@
 
 }
 
+h3 {
+   margin-block-end: 0;
+}
+.lezioni p, .steps p, .why p {
+  text-align: justify;
+}
 /* BLOCCO LEZIONI */
 
 .lezioni {
-  background-color: yellow;
+  margin-bottom: 2vh;
 }
 
 .lezioni img {
@@ -26,7 +32,8 @@
 
 .steps {
   float: left;
-  background-color: pink;
+  background-color: #f9f9f9;
+  margin-bottom: 2vh;
 }
 
 .steps img {
@@ -54,20 +61,48 @@
 /********************** AGGIUNTA DI MEDIAQUERY ******************/
 /* ************************************************************ */
 @media all and (max-width: 768px){
-
-  .lezioni img{
+/* lezioni */
+  .aCasa img{
     height: auto;
-    width: 25%;
+    width: 38%;
   }
 
+  .online img {
+    height: auto;
+    width: 42%;
+  }
+/* steps */
   .steps img{
     height: auto;
-    width: 20%;
+    width: 30%;
   }
-
+/* why */
   .why img {
     height: auto;
-    width: 15%;
+    width: 30%;
+    background-color:#428bca;
+    border-radius:50%;
+    padding:20px
+  }
+  /* testo sezione why */
+  .flessibile p, .soddisfazione p, .piuGrande p {
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
 
+}
+@media all and (min-width: 768px) and (max-width: 992px){
+  .online img {
+    margin-top: 4vh;
+    width: 70%;
+  }
+
+}
+
+@media all and (min-width: 992px){
+  /* alla visoine grande tolgo il margin bottom a steps */
+ .steps{
+   margin-bottom: 0vh;
+ }
 }
